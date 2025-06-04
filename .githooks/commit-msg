@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Regex to validate the type pattern
+REGEX="^((Merge[ a-z-]* (branch|pull request).*)|(Revert*)|((build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\(.*\))?!?: .*))"
+FILE="$(cat "$1")" # File containing the commit message
+
+if ! [[ $FILE =~ $REGEX ]]; then
+  echo >&2 "ERROR: Commit message must follow the conventional commits spec."
+  echo >&2 "See: https://www.conventionalcommits.org/en/v1.0.0/"
+  exit 1
+fi
