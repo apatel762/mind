@@ -14,7 +14,8 @@ public class WebApp {
    */
   public static void main(String[] args) {
 
-    // This 'try-with-resources' block is the IoC container. We need it here to find all the implemented HTTP features, which need to be registered with the web server.
+    // This 'try-with-resources' block is the IoC container. We need it here to find all the
+    // implemented HTTP features, which need to be registered with the web server.
     try (final var beans = BeanScope.builder().build()) {
 
       final var routes = beans.list(HttpFeature.class);
