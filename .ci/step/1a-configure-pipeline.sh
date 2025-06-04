@@ -2,7 +2,7 @@
 # Pipeline configuration
 
 # ---------------------------------------------------------------------------
-Environment::set APP_NAME "vagabond"
+Environment::set APP_NAME "mind"
 
 # ---------------------------------------------------------------------------
 # Detect the environment that we are running in.
